@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/img/favicon.png">
+    <title>Introduction about CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Summary</header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Introduction">Introduction</a>
+          </li>
+        <li>
+          <a class="nav-link" href="#Selectors">Selectors</a>
+          </li>
+        <li>
+          <a class="nav-link" href="#PnV">Properties and Values</a>
+          </li>
+        <li>
+          <a class="nav-link" href="#Responsive">Responsive</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Social">Social</a>
+            </li>
+          <li>
+            <a class="nav-link" href="index1.html">HTML</a>
+            </li>
+          <li>
+            <a class="nav-link" href="index.html">Home</a>
+            </li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>CSS, or Cascading Style Sheets, is a style sheet language used for describing the presentation of a document written in HTML. It controls the layout, colors, fonts, and overall visual appearance of web pages, allowing for the separation of content from design. CSS enables web developers to create visually engaging and responsive web designs that can adapt to different screen sizes and devices.</p>
+        <p>This is the general syntax of a Element in CSS:</p>
+        <code>
+          selectors {
+            Properties and Values
+          }
+        </code>
+        <p>For Example:</p>
+        <code>
+          header {
+            color: black;
+            margin: 10px;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: thin;
+          }
+        </code>
+      </section>
+
+      <section class="main-section" id="Selectors">
+        <header>Selectors</header>
+        <p>Class: </p>
+        <code>
+          /* HTML CODE */
+          &lt;div class="home"&gt;&lt;/div&gt;
+          /* CSS FOR IT */
+          .home {
+            text-align: center;
+          }
+        </code>
+        <p>Id: </p>
+        <code>
+          /* HTML CODE */
+          &lt;nav id="navbar"&gt;&lt;/nav&gt;
+          /* CSS FOR IT */
+          #navbar {
+            width: 300px;
+            height: 100%;
+          }
+        </code>
+        <p>DIRECT children: </p>
+        <code>
+          /* HTML CODE */
+          &lt;section&gt;
+          &lt;div&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;/div&gt;
+          &lt;div&gt;
+          &lt;div&gt;&lt;/div&gt; /* No select it */
+          &lt;div&gt;&lt;/div&gt; /* No select it */
+          &lt;/div&gt;
+          &lt;/section&gt;
+          /* CSS FOR IT */
+          section > div {
+            margin: 15px 0px 0px 20px;
+          }
+        </code>
+        <p>INDIRECT children: </p>
+        <code>
+          /* HTML CODE */
+          &lt;section&gt;
+          &lt;div&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;/div&gt;
+          &lt;div&gt;
+          &lt;div&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;/section&gt;
+          /* CSS FOR IT */
+          section div {
+            margin: 15px 0px 0px 20px;
+          }
+        </code>
+        <p>Double class: </p>
+        <code>
+          /* HTML CODE */
+          &lt;div class="single double"&gt;&lt;/div&gt;   
+          &lt;div class="single"&gt;&lt;/div&gt; /* No select it */
+          &lt;div class="single"&gt;&lt;/div&gt; /* No select it */
+          /* CSS FOR IT */
+          .single.double {
+            margin: 15px 0px 0px 20px;
+          }
+        </code>
+        <p>Fair: </p>
+        <code>
+          /* HTML CODE */   
+          &lt;div&gt;&lt;/div&gt;   
+          &lt;nav&gt;&lt;/nav&gt;  
+          &lt;nav&gt;&lt;/nav&gt;
+          /* CSS FOR IT */
+          div, nav {
+            margin: 15px 0px 0px 20px;
+          }
+        </code>
+        <p>INDIRECT After: </p>
+        <code>
+          /* HTML CODE */  
+          &lt;div&gt;&lt;/div&gt;   
+          &lt;nav&gt;&lt;/nav&gt;  
+          &lt;nav&gt;&lt;/nav&gt;
+          /* CSS FOR IT */
+          div ~ nav {
+            margin: 15px 0px 0px 20px;
+          }
+        </code>
+        <p>DIRECT After: </p>
+        <code>
+          /* HTML CODE */  
+          &lt;div&gt;&lt;/div&gt;   
+          &lt;nav&gt;&lt;/nav&gt;  
+          &lt;nav&gt;&lt;/nav&gt; /* No select it */
+          /* CSS FOR IT */
+          div + nav {
+            margin: 15px 0px 0px 20px;
+          }
+        </code>
+      </section>
+
+      <section class="main-section" id="PnV">
+        <header>Properties and Values</header>
+        <p>It's a pair to define the style of the selector.</p>
+        <p>For Example:</p>
+        <code>
+          header {
+            color: black; /* Color of the font is black */
+            margin: 10px; /* Margin of the box (4 direction) is 10px */
+            text-align: center; /* Set the text to center of the box */
+            font-size: 18px; /* Set the size of the font to 18px */ 
+          }
+        </code>
+        <p>The src attribute of the img tag specifies the source URL (Uniform Resource Locator) of the image to be displayed on a web page. This attribute is mandatory for the img tag, as it tells the browser where to find the image file that should be rendered.</p>
+      </section>
+
+      <section class="main-section" id="Responsive">
+        <header>Responsive</header>
+        <p>Use grid-flexbox and media technique.</p>
+        <p>For Example</p>
+        <code>
+          .body {
+            display: flex; /* This is a flexbox */
+            flex-direction: column; /* box - box - box */
+            flex: 1 1 100px; /* It have 1 in the total - shrink ability = 1 - origin 100px */
+          }
+          @media all and (max-width: 550px){ /* Only apply that CSS rule if width of the screen less than 550px */
+            .body{
+                flex-direction: column;
+            }
+            main{
+                padding: 5em 0;
+            }
+          }
+        </code>
+        <p><a href="/flexbox/index.html" target="_blank" rel="noopener">Experience it for yourself.</a></p>
+      </section>
+
+      <section class="main-section" id="Social">
+        <header>Social</header>
+        <p><a href="https://github.com/KelvinNguyen2h3" target="_blank" rel="noopener">Visit my github for more!</a></p>
+      </section>
+    </main>
+  </body>
+</html>
