@@ -1,0 +1,62 @@
+html emmet
+
+tags: p -> <p></p>
+id: #hello -> <div id="hello"></div>
+class: .hello -> <div class="hello"></div>
+double class: .hello.world -> <div class="hello class"></div>
+content: h3{hello} -> <h3>hello</h3>
+multiple: h3*4 ->
+<h3></h3>
+<h3></h3>
+<h3></h3>
+<h3></h3>
+child: div>a -> <div><a href=""></a></div>
+fair: div^a^p ->
+<div></div>
+<a href=""></a>
+<p></p>
+after: div+a+p ->
+<div></div>
+<a href=""></a>
+<p></p>
+fair vs after
+div>a^p ->
+<div><a href=""></a></div>
+<p></p>
+div>a+p ->
+<div>
+    <a href=""></a>
+    <p></p>
+</div>
+
+example 1: order list
+ol>li.item*8>a.link${link $}
+example 2: unorder list
+ul>li.item.item$*9>h1.name{cat $}+img.picture
+example 3: table
+table>thead>tr>td+th*3^^tbody>tr*3>td+th*3
+example 4: a header with example 1,2,3
+h1{Emmet}^ol>li.item*8>a.link${link $}^^^ul>li.item.item$*9>h1.name{cat $}+img.picture^^^^table>thead>tr>td+th*3^^tbody>tr*3>td+th*3
+
+css emmet
+
+bxz —> box-sizing: border-box;
+d:f
+w —> width: ;
+h —> height: ;
+maw —> max-width: ;
+mah —> max-height: ;
+miw —> min-width: ;
+mih —> min-height: ;
+w —> width: ;
+h —> height: ;
+maw —> max-width: ;
+mah —> max-height: ;
+miw —> min-width: ;
+mih —> min-height: ;
+
+example: h50px+w50px+bgc:blue
+—>
+height: 50px;
+width: 50px;
+background-color: blue; 
