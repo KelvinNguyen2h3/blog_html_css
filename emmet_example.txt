@@ -1,0 +1,16 @@
+html emmet
+example 1: order list
+ol>li.item*8>a.link${link $}
+example 2: unorder list
+ul>li.item.item$*9>h1.name{cat $}+img.picture
+example 3: table
+table>thead>tr>td+th*3^^tbody>tr*3>td+th*3
+example 4: a header with example 1,2,3
+h1{Emmet}^ol>li.item*8>a.link${link $}^^^ul>li.item.item$*9>h1.name{cat $}+img.picture^^^^table>thead>tr>td+th*3^^tbody>tr*3>td+th*3
+
+css emmet
+example: h50px+w50px+bgc:blue
+—>
+height: 50px;
+width: 50px;
+background-color: blue; 
